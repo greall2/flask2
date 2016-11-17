@@ -10,8 +10,12 @@ def route():
 	
 
 @app.route("/name")
-def name():
-	return "Hello Riona!"
+def fname():
+	return "Your name is"
+
+@app.route("/name/<name>")
+def name(name):
+	return "Your name is " + name
 
 if __name__ == "__main__":
     app.run()
