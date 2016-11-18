@@ -52,7 +52,7 @@
        e.preventDefault();
 
          data = {name: $("#name").val()}
-        $.get("/name", data, function(resbody)
+        $.post("/name", data, function(resbody)
          {
            $("#serveroutput").text(resbody);
         });
